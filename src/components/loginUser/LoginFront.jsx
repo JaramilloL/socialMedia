@@ -1,7 +1,14 @@
-import { Box, Button, TextField, Typography } from "@mui/material"
-import PropTypes from 'prop-types'
+import { Box, Button, Link, TextField, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 
-const LoginFront = ({ onSubmit, register, errors }) => {
+const LoginFront = ({
+  onSubmit,
+  register,
+  errors,
+  errorMessage,
+  sigInGoogle,
+  resetPasswordUser,
+}) => {
   return (
     <Box
       display="flex"
@@ -63,25 +70,56 @@ const LoginFront = ({ onSubmit, register, errors }) => {
             variant="contained"
             color="secondary"
             sx={{
-              width: "10%",
+              width: "50%",
               display: "flex",
               justifyContent: "center",
               m: "0 auto",
+              mb: 2,
             }}
             type="submit"
           >
             Submite
           </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{
+              width: "50%",
+              display: "flex",
+              justifyContent: "center",
+              m: "0 auto",
+              //   bgcolor: "#712"
+            }}
+            onClick={sigInGoogle}
+          >
+            GOOGLE
+          </Button>
+          <Link
+            mt={2}
+            variant="body2"
+            display="flex"
+            alignContent="center"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Button onClick={resetPasswordUser}>Forgot password</Button>
+          </Link>
+          <Typography variant="body2">
+            {errorMessage && errorMessage}
+          </Typography>
         </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default LoginFront
+export default LoginFront;
 
 LoginFront.propTypes = {
-    onSubmit: PropTypes.func.isRequired,
-    register: PropTypes.func.isRequired,
-    errors: PropTypes.object
-}
+  onSubmit: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
+  errors: PropTypes.object,
+  errorMessage: PropTypes.string,
+  sigInGoogle: PropTypes.func,
+  resetPasswordUser: PropTypes.func,
+};
