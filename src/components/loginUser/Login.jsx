@@ -36,6 +36,8 @@ const Login = () => {
         setErrorMessage(
           "User is did not make created or password is incorrect"
         );
+        if(error.code === "auth/wrong-password") setErrorMessage("Invalid password");
+        if(error.code === "auth/invalid-email") setErrorMessage("Invalid email");
       console.log(error.message);
     }
   });

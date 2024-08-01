@@ -104,7 +104,7 @@ const LoginFront = ({
           >
             <Button onClick={resetPasswordUser}>Forgot password</Button>
           </Link>
-          <Typography variant="body2">
+          <Typography variant="body1" color='red' textAlign='center'>
             {errorMessage && errorMessage}
           </Typography>
         </Box>
