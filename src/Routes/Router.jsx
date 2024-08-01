@@ -4,6 +4,7 @@ import Index from "../layout/Index";
 import RegisterPage from "../pages/RegisterPage";
 import LoginPage from "../pages/LoginPage";
 import Error from "../components/errors/Error";
+import ChatPage from "../pages/ChatPage";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         element: <RegisterPage />,
+      },
+      {
+        path: "/chat",
+        element: <ChatPage/>
       },
     ],
   },
