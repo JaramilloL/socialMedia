@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material"
 import { useContext } from "react"
 import { UserContext } from "../../context/UserContext"
 import { Navigate, useNavigate } from "react-router-dom"
+import Chat from "./Chat"
 
 const ChatGeneral = () => {
     const { logOutUser, user, loading } = useContext(UserContext)
@@ -24,6 +25,9 @@ const ChatGeneral = () => {
         <Button variant="outlined" color="secondary" sx={{mt: 2}} onClick={logOut}>
           LogOut
         </Button>
+        <Box>
+            <Chat/>
+        </Box>
     </Box>
   )
 }
