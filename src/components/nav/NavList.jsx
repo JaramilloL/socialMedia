@@ -5,6 +5,7 @@ import HowToRegIcon from "@mui/icons-material/HowToReg";
 import PropTypes from 'prop-types'
 import { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const NavList = ({ onClick }) => {
   //creamos el contexto para cambiar la informacion del navlist
@@ -18,7 +19,7 @@ const NavList = ({ onClick }) => {
             user ? (
               <ListItemButton>
                 <ListItemIcon onClick={logOutUser}>
-
+                    <LogoutIcon/>
                   <ListItemText>LogOut</ListItemText>
                 </ListItemIcon>
               </ListItemButton>
