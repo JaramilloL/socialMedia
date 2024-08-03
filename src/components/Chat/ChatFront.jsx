@@ -11,6 +11,7 @@ const ChatFront = ({ shareMessages, message, setMessage, messages }) => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         variant="filled"
+        autoComplete="off"
       />
       <Button variant="text" color="primary" type="submit">
         Submit
