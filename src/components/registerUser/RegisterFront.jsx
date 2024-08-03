@@ -1,7 +1,7 @@
-import { Box, Button, TextField, Typography } from "@mui/material"
-import PropTypes from 'prop-types'
+import { Box, Button, TextField, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 
-const RegisterFront = ({ onSubmit, register, errors }) => {
+const RegisterFront = ({ onSubmit, register, errors, errorMessage }) => {
   return (
     <Box
       display="flex"
@@ -92,16 +92,20 @@ const RegisterFront = ({ onSubmit, register, errors }) => {
           >
             Submite
           </Button>
+          <Typography variant="body1" color="red" textAlign="center">
+            {errorMessage && errorMessage}
+          </Typography>
         </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default RegisterFront
+export default RegisterFront;
 
 RegisterFront.propTypes = {
-    onSubmit: PropTypes.func.isRequired,
-    register: PropTypes.func.isRequired,
-    errors: PropTypes.object
-}
+  onSubmit: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
+  errors: PropTypes.object,
+  errorMessage: PropTypes.string,
+};
