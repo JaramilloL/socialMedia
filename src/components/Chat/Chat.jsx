@@ -2,7 +2,6 @@
 import { collection, addDoc, onSnapshot, query, orderBy } from "firebase/firestore";
 import { useContext, useEffect, useState } from "react";
 import { db } from "../../firebase/firebaseConfig";
-
 import { UserContext } from "../../context/UserContext";
 import ChatFront from "./ChatFront";
 const Chat = () => {

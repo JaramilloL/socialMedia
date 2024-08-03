@@ -1,6 +1,7 @@
 //aqui solo se implementara la parte vizual del componente del
 import { Box, Button, TextField, Typography } from "@mui/material";
 import PropTypes from "prop-types";
+import Friends from "./online/Friends";
 
 const ChatFront = ({ shareMessages, message, setMessage, messages }) => {
   return (
@@ -17,6 +18,7 @@ const ChatFront = ({ shareMessages, message, setMessage, messages }) => {
         Submit
       </Button>
       <Box>
+      <Friends/>
         {messages &&
           messages.map((mess) => (
             <Box key={mess.id} display='flex' justifyContent='end'>
